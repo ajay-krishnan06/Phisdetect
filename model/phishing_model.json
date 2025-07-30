@@ -1,0 +1,136 @@
+{
+  "feature": "SSLfinal_State",
+  "threshold": 0.5,
+  "left": {
+    "feature": "Prefix_Suffix",
+    "threshold": 0.0,
+    "left": {
+      "feature": "web_traffic",
+      "threshold": 0.5,
+      "left": {
+        "feature": "SSLfinal_State",
+        "threshold": -0.5,
+        "left": {
+          "feature": "Domain_registeration_length",
+          "threshold": 0.0,
+          "left": {
+            "value": 0
+          },
+          "right": {
+            "value": 0
+          }
+        },
+        "right": {
+          "value": 0
+        }
+      },
+      "right": {
+        "feature": "having_IP_Address",
+        "threshold": 0.0,
+        "left": {
+          "feature": "SSLfinal_State",
+          "threshold": -0.5,
+          "left": {
+            "value": 0
+          },
+          "right": {
+            "value": 0
+          }
+        },
+        "right": {
+          "feature": "URL_Length",
+          "threshold": 0.5,
+          "left": {
+            "value": 0
+          },
+          "right": {
+            "value": 1
+          }
+        }
+      }
+    },
+    "right": {
+      "value": 1
+    }
+  },
+  "right": {
+    "feature": "web_traffic",
+    "threshold": 0.5,
+    "left": {
+      "feature": "web_traffic",
+      "threshold": -0.5,
+      "left": {
+        "feature": "Domain_registeration_length",
+        "threshold": 0.0,
+        "left": {
+          "feature": "Prefix_Suffix",
+          "threshold": 0.0,
+          "left": {
+            "value": 1
+          },
+          "right": {
+            "value": 1
+          }
+        },
+        "right": {
+          "feature": "Prefix_Suffix",
+          "threshold": 0.0,
+          "left": {
+            "value": 1
+          },
+          "right": {
+            "value": 1
+          }
+        }
+      },
+      "right": {
+        "feature": "Prefix_Suffix",
+        "threshold": 0.0,
+        "left": {
+          "feature": "Statistical_report",
+          "threshold": 0.0,
+          "left": {
+            "value": 0
+          },
+          "right": {
+            "value": 1
+          }
+        },
+        "right": {
+          "value": 1
+        }
+      }
+    },
+    "right": {
+      "feature": "Prefix_Suffix",
+      "threshold": 0.0,
+      "left": {
+        "feature": "Domain_registeration_length",
+        "threshold": 0.0,
+        "left": {
+          "feature": "having_IP_Address",
+          "threshold": 0.0,
+          "left": {
+            "value": 1
+          },
+          "right": {
+            "value": 1
+          }
+        },
+        "right": {
+          "feature": "HTTPS_token",
+          "threshold": 0.0,
+          "left": {
+            "value": 1
+          },
+          "right": {
+            "value": 1
+          }
+        }
+      },
+      "right": {
+        "value": 1
+      }
+    }
+  }
+}
